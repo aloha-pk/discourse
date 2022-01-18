@@ -30,9 +30,9 @@ Hello! This is a routine yearly security reminder from your Discourse instance.
 
 As a courtesy, we wanted to let you know that the following credentials used on your Discourse instance have not been updated in more than two years:
 
-google_oauth2_client_secret - #{google_secret.updated_at.to_date.to_s(:db)}
-github_client_secret - #{github_secret.updated_at.to_date.to_s(:db)}
-api key description - #{api_key.created_at.to_date.to_s(:db)}
+google_oauth2_client_secret - #{google_secret.updated_at.to_date.to_formatted_s(:db)}
+github_client_secret - #{github_secret.updated_at.to_date.to_formatted_s(:db)}
+api key description - #{api_key.created_at.to_date.to_formatted_s(:db)}
 
 No action is required at this time, however, it is considered good security practice to cycle all your important credentials every few years.
     MSG
@@ -47,11 +47,11 @@ Hello! This is a routine yearly security reminder from your Discourse instance.
 
 As a courtesy, we wanted to let you know that the following credentials used on your Discourse instance have not been updated in more than two years:
 
-google_oauth2_client_secret - #{google_secret.updated_at.to_date.to_s(:db)}
-github_client_secret - #{github_secret.updated_at.to_date.to_s(:db)}
-twitter_consumer_secret - #{recent_twitter_secret.updated_at.to_date.to_s(:db)}
-api key description - #{api_key.created_at.to_date.to_s(:db)}
-recent api key description - #{admin.username} - #{recent_api_key.created_at.to_date.to_s(:db)}
+google_oauth2_client_secret - #{google_secret.updated_at.to_date.to_formatted_s(:db)}
+github_client_secret - #{github_secret.updated_at.to_date.to_formatted_s(:db)}
+twitter_consumer_secret - #{recent_twitter_secret.updated_at.to_date.to_formatted_s(:db)}
+api key description - #{api_key.created_at.to_date.to_formatted_s(:db)}
+recent api key description - #{admin.username} - #{recent_api_key.created_at.to_date.to_formatted_s(:db)}
 
 No action is required at this time, however, it is considered good security practice to cycle all your important credentials every few years.
     MSG

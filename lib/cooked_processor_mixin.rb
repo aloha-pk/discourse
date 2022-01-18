@@ -330,7 +330,7 @@ module CookedProcessorMixin
   end
 
   def create_node(tag_name, klass)
-    node = Nokogiri::XML::Node.new(tag_name, @doc)
+    node = Nokogiri::XML::Node.new(tag_name, @doc.document)
     node["class"] = klass if klass.present?
     node
   end
